@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <title>EL LISSITZKY</title>
+    <script src=" https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+    <script>
+        $(document).ready(function(){
+            $("h1").click(function(){
+                $(this).css("color","#f94144");
+                $("h2").css("color","#f94144");
+                $(".circulo").css("background-color","#264653");
+                $(".cuadrado1").css("background-color","#2a9d8f");
+                $(".cuadrado2").css("background-color","#e9c46a");
+                $("body").css("background-color","#fefae0");
+                });
+            });
+
+            $(document).ready(function(){
+            $("h2").click(function(){
+                $(this).css("color","black");
+                $(".circulo").css("background-color","black");
+                $(".cuadrado1").css("background-color","black");
+                $(".cuadrado2").css("background-color","black");
+                $("body").css("background-color","white");
+                });
+            });
+
+           
+            $(document).ready(function(){
+            $(".circulo").hide();
+                $(".cuadrado1").click(function(){
+                $(".circulo").fadeToggle();
+                });
+            });
+
+            $(document).ready(function(){
+            $(".cuadrado2").click(function(){
+                $(this).css("color","#2F2F33");
+                $(".circulo").css("background-color","#D72226");
+                $(".cuadrado1").css("background-color","#D72226");
+                $("h2").css("color","#2F2F33");
+                $("h1").css("color","2F2F33");
+                $("body").css("background-color","#EEEFE9");
+            });
+        });
+    </script>
+
+   <style>
+    body{
+    background-color: #EEEFE9;
+    }
+
+    a{
+        font-family: 'Roboto', sans-serif;    
+        font-weight: 200;
+        color: #D72226;
+        margin-left: 140px;
+    }
+
+    .container2{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(10, 100px);
+    }
+    
+    h3{
+        font-size: 35px;
+    }
+
+    .wave {
+        grid-column: 2/3;
+        grid-row: 9/10;
+        animation-name: animation_mano;  
+        animation-duration: 2.5s;        
+        animation-iteration-count: infinite;  
+        transform-origin: 70% 70%;      
+        display: inline-block;
+    }
+
+    @keyframes animation_mano{
+        0% { transform: rotate( 0.0deg) }
+        10% { transform: rotate(14.0deg) }  
+        20% { transform: rotate(-8.0deg) }
+        30% { transform: rotate(14.0deg) }
+        40% { transform: rotate(-4.0deg) }
+        50% { transform: rotate(10.0deg) }
+        60% { transform: rotate( 0.0deg) }  
+        100% { transform: rotate( 0.0deg) }
+    }
+
+    .cuadrado3{
+    border:2.5px solid rgb(29, 28, 28);
+    grid-column: 2/9;
+    grid-row: 1/9;
+    }
+
+    .cuadrado1{
+    grid-column: 6/7;
+    grid-row: 2/3;
+    width: 100px; 
+    height: 100px; 
+    background: #D72226;
+    transform: rotate(45deg);
+    }
+
+    .cuadrado2{
+    grid-column: 7/8;
+    grid-row: 3/4;
+    width: 100px; 
+    height: 100px; 
+    background: #2F2F33;
+    transform: rotate(45deg);
+    }
+
+    .circulo{
+    background-color: #D72226;
+    grid-column: 3/4;
+    grid-row: 4/6;
+    width: 400px;
+    height:400px;
+    border-radius: 50%;
+    }
+
+    h1{
+    grid-column: 3/4;
+    grid-row: 9/10;
+    color: #2F2F33;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 40pt;
+    }
+    
+    hr{
+    margin-top: -20px;
+    grid-column: 7/9;
+    grid-row: 9/10;
+    transform: rotate(90deg);
+    height: 100px;
+    width: 2px;
+    background-color: #2F2F33;
+    }
+
+    h2{
+    grid-column: 8/9;
+    grid-row: 9/10;
+    color: #2F2F33;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 30pt;
+    }
+    </style>
+
+
+</head>
+<body>
+    <div>
+        <p><a href= "http://elartecomoarte.blogspot.com/2016/08/historia-de-dos-cuadrados.html">Dato: Esta imagen está inspirada en una página de un libro de Lissitzky llamado "Historia sobre dos cuadrados", de 1922! Clicka el link para ver más :)</a></p>
+
+    <div class="container2">
+        <h1>EL LISSITZKY</h1>
+        <hr>
+        <h2>N</h2>
+        <div class="circulo"></div>
+        <div class="cuadrado1"></div>
+        <div class="cuadrado2"></div>
+        <div class="cuadrado3"></div>
+        <h3 class="wave">👉</h3>
+    </div>
+
+</body>
+</html>
